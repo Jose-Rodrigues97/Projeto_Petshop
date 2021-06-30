@@ -4,7 +4,7 @@ import java.util.Scanner;
 public abstract class deleteConsulta {
 
     public static void deletarCons(List<Consulta> listConsulta) {
-        try {
+        try { 
             Scanner reading = new Scanner(System.in);
             System.out.println("=======EXCLUIR CONSULTA=======");
             System.out.println("Insira o Id");
