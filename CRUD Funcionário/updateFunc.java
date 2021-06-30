@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public abstract class updateFunc {
     public static void atualizarFunc(List<Administrador> listAdmin, List<Veterinario> listVet) {
-        try {
+        try { 
             Scanner reading = new Scanner(System.in);
             String id;
             int dia, mes, ano;
