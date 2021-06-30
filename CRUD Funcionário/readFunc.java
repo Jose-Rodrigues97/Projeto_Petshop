@@ -4,7 +4,7 @@ import java.util.List;
 public abstract class readFunc {
     public static void pesquisarFunc(List<Administrador> listAdmin, List<Veterinario> listVet) {
         try {
-            boolean idFail = false;
+            boolean idFail = false; 
             Scanner reading = new Scanner(System.in);
             System.out.printf("======PESQUISAR FUNCIONÁRIO======\n");
             System.out.printf("\n1 - Listar por Id\n");
