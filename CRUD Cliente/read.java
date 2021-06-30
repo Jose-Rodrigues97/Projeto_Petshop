@@ -1,5 +1,5 @@
 import java.util.List;
-import java.util.Scanner;
+import java.util.Scanner; 
 
 public abstract class read {
     public static void pesquisarCli(List<Cliente> listCliente) {
