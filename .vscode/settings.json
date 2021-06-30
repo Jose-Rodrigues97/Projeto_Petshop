@@ -1,0 +1,11 @@
+{
+    "java.project.sourcePaths": [
+        "src",
+        "Class",
+        "CRUD Pet",
+        "CRUD Funcionário",
+        "CRUD Consulta",
+        "CRUD Cliente",
+        ""
+    ]
+} 
