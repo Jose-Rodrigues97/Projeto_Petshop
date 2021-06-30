@@ -1,5 +1,5 @@
 import java.time.LocalDate;
-import java.time.LocalDateTime; 
+import java.time.LocalDateTime;
 import java.time.Month;
 import java.util.ArrayList;
 import java.util.List;
@@ -324,7 +324,7 @@ public class App {
         System.out.println("3 - Atualiazar Pet");
         System.out.println("4 - Deletar Pet");
         System.out.println("5 - Voltar para Aba Anterior");
-        System.out.println("0 - Fechar sistema\n");
+        System.out.println("0 - Fechar sistema");
         System.out.printf("O que deseja fazer? ");
         int option = reading.nextInt();
         return option;
@@ -357,5 +357,4 @@ public class App {
         System.out.printf("O que deseja fazer? ");
     }
     // #endregion
-
 }

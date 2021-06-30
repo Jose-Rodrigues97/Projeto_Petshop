@@ -9,19 +9,22 @@ public abstract class deletePet {
             System.out.print("Insira o Id do pet: ");
             String id = reading.nextLine();
             boolean idFail = false;
-            for (Animal animal : listAnimal) {
-                if (animal.getId().equals(id)) {
-                    listAnimal.remove(animal);
-                    System.out.println("PET REMOVIDO COM SUCESSO.");
-                    idFail = true;
+            if (listAnimal.isEmpty()) {
+                System.out.printf("\nLISTA VAZIA.");
+            } else {
+                for (Animal animal : listAnimal) {
+                    if (animal.getId().equals(id)) {
+                        listAnimal.remove(animal);
+                        System.out.println("PET REMOVIDO COM SUCESSO.");
+                        idFail = true;
+                    }
                 }
-            }
-            if (!idFail) {
-                System.out.println("ID INVÁLIDO.");
+                if (!idFail) {
+                    System.out.println("ID INVÁLIDO.");
+                }
             }
         } catch (Exception e) {
             System.out.println("ERRO AO EXCLUIR PET.");
         }
     }
 }
- 

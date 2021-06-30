@@ -1,5 +1,5 @@
 import java.time.LocalDate;
-import java.util.List; 
+import java.util.List;
 import java.util.Scanner;
 
 public abstract class createPet {
@@ -17,6 +17,8 @@ public abstract class createPet {
             } else {
                 for (Cliente cliente : listCliente) {
                     if (cliente.getCodCliente().equals(animal.getIdDono())) {
+                        System.out.print("Nome do Pet: ");
+                        animal.setNomePet(reading.nextLine());
                         System.out.print("Espécie: ");
                         animal.setEspecie(reading.nextLine());
                         System.out.print("Raça: ");

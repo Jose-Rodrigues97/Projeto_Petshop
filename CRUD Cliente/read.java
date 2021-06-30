@@ -1,5 +1,5 @@
 import java.util.List;
-import java.util.Scanner; 
+import java.util.Scanner;
 
 public abstract class read {
     public static void pesquisarCli(List<Cliente> listCliente) {
@@ -21,8 +21,8 @@ public abstract class read {
                         System.out.printf("\nLISTA VAZIA.");
                     } else {
                         for (Cliente cliente : listCliente) {
-                            System.out.printf("\nNome: ");
-                            System.out.printf(cliente.getNome());
+                            System.out.print("\nNome: ");
+                            System.out.print(cliente.getNome());
                             System.out.print(" - ");
                             System.out.print("Id: ");
                             System.out.printf(cliente.getCodCliente());
@@ -30,28 +30,32 @@ public abstract class read {
                     }
                     break;
                 case 2:
-                    System.out.print("Insira o Id do cliente: ");
-                    id = reading.next();
-                    System.out.printf("\n======DADOS DO CLIENTE======\n");
-                    for (Cliente cliente : listCliente) {
-                        if (cliente.getCodCliente().equals(id)) {
-                            idFail = true;
-                            System.out.printf("Nome: ");
-                            System.out.printf(cliente.getNome());
-                            System.out.printf("\nId: ");
-                            System.out.printf(cliente.getCodCliente());
-                            System.out.printf("\nEndereço: ");
-                            System.out.printf(cliente.getRua());
-                            System.out.printf("\nCPF: ");
-                            System.out.print(cliente.getCpf());
-                            System.out.printf("\nTelefone: ");
-                            System.out.print(cliente.getTelefone());
-                            System.out.printf("\nData de Nascimento: ");
-                            System.out.print(cliente.getDataNasc());
+                    if (listCliente.isEmpty()) {
+                        System.out.printf("\nLISTA VAZIA.");
+                    } else {
+                        System.out.print("Insira o Id do cliente: ");
+                        id = reading.next();
+                        System.out.printf("\n======DADOS DO CLIENTE======\n");
+                        for (Cliente cliente : listCliente) {
+                            if (cliente.getCodCliente().equals(id)) {
+                                idFail = true;
+                                System.out.print("\nNome: ");
+                                System.out.print(cliente.getNome());
+                                System.out.print("\nId: ");
+                                System.out.print(cliente.getCodCliente());
+                                System.out.print("\nEndereço: ");
+                                System.out.print(cliente.getRua());
+                                System.out.print("\nCPF: ");
+                                System.out.print(cliente.getCpf());
+                                System.out.print("\nTelefone: ");
+                                System.out.print(cliente.getTelefone());
+                                System.out.print("\nData de Nascimento: ");
+                                System.out.print(cliente.getDataNasc());
+                            }
                         }
-                    }
-                    if (!idFail) {
-                        System.out.println("\nID INVÁLIDO. ");
+                        if (!idFail) {
+                            System.out.println("\nID INVÁLIDO. ");
+                        }
                     }
                     break;
                 default:

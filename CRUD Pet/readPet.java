@@ -1,10 +1,10 @@
-import java.util.List; 
+import java.util.List;
 import java.util.Scanner;
 
 public abstract class readPet {
     public static void pesquisarPet(List<Animal> listAnimal) {
         try {
-
+            String id;
             Scanner reading = new Scanner(System.in);
             System.out.printf("1 - Listar todos Pets\n");
             System.out.printf("2 - Listar por Id\n");
@@ -17,46 +17,43 @@ public abstract class readPet {
                     } else {
                         System.out.printf("\n======LISTA DE PETS======");
                         for (Animal animal : listAnimal) {
-                            System.out.printf("Espécie: ");
-                            System.out.printf(animal.getEspecie());
-                            System.out.printf("\nId: ");
-                            System.out.printf(animal.getId());
-                            System.out.printf("\nRaça: ");
-                            System.out.printf(animal.getRaca());
-                            System.out.printf("\nPeso: ");
-                            System.out.print(animal.getPeso());
-                            System.out.printf("\nData de Nascimento: ");
-                            System.out.print(animal.getNascAnimal());
-                            System.out.printf("\nID do Dono: ");
-                            System.out.print(animal.getIdDono());
+                            System.out.print("\nEspécie: ");
+                            System.out.print(animal.getEspecie());
+                            System.out.print(" - ");
+                            System.out.print("Id: ");
+                            System.out.print(animal.getId());
                         }
                     }
                     break;
                 case 2:
                     boolean idFail = false;
                     System.out.print("Insira o Id do pet: ");
-                    System.out.printf("\n======DADOS DO CLIENTE======\n");
-                    String id = reading.nextLine();
-                    for (Animal animal : listAnimal) {
-                        if (id == animal.getId()) {
-                            idFail = true;
-                            System.out.printf("Espécie: ");
-                            System.out.printf(animal.getEspecie());
-                            System.out.printf("Id: ");
-                            System.out.printf(animal.getId());
-                            System.out.printf("Raça: ");
-                            System.out.printf(animal.getRaca());
-                            System.out.printf("Peso: ");
-                            System.out.print(animal.getPeso());
-                            System.out.printf("Data de Nascimento: ");
-                            System.out.print(animal.getNascAnimal());
-                            System.out.printf("ID do Dono: ");
-                            System.out.print(animal.getIdDono());
+                    id = reading.next();
+                    if (listAnimal.isEmpty()) {
+                        System.out.printf("\nLISTA VAZIA.");
+                    } else {
+                        for (Animal animal : listAnimal) {
+                            if (animal.getId().equals(id)) {
+                                System.out.print("\n======DADOS DO PET======\n");
+                                idFail = true;
+                                System.out.print("\nEspécie: ");
+                                System.out.print(animal.getEspecie());
+                                System.out.print("\nId: ");
+                                System.out.print(animal.getId());
+                                System.out.print("\nRaça: ");
+                                System.out.print(animal.getRaca());
+                                System.out.print("\nPeso: ");
+                                System.out.print(animal.getPeso());
+                                System.out.print("\nData de Nascimento: ");
+                                System.out.print(animal.getNascAnimal());
+                                System.out.print("\nID do Dono: ");
+                                System.out.print(animal.getIdDono());
+                            }
+                            break;
                         }
-                        break;
-                    }
-                    if (!idFail) {
-                        System.out.println("\nID INVÁLIDO. ");
+                        if (!idFail) {
+                            System.out.println("\nID INVÁLIDO. ");
+                        }
                     }
             }
         } catch (Exception e) {

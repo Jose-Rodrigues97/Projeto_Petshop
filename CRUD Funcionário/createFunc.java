@@ -1,35 +1,36 @@
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Scanner; 
+import java.util.Scanner;
 
 public class createFunc {
 
     public static void inserirFunc(List<Administrador> listAdmin, List<Veterinario> listVet) {
         try {
             Scanner reading = new Scanner(System.in);
-            System.out.println("======CADASTRAR FUNCIONÁRIO======");
-            System.out.println("1 - Cadastrar Médico Veterinário");
-            System.out.println("2 - Cadastrar Administrador");
+            System.out.print("======CADASTRAR FUNCIONÁRIO======");
+            System.out.print("\n1 - Cadastrar Médico Veterinário");
+            System.out.print("\n2 - Cadastrar Administrador");
+            System.out.printf("O que deseja fazer? ");
             int option = reading.nextInt();
             int dia, mes, ano;
             String id;
             if (option == 1) {
                 System.out.println("\n======CADASTRAR MÉDICO VETERINÁRIO======\n");
                 Veterinario vet = new Veterinario();
-                System.out.print("\nNome: ");
+                System.out.print("Nome: ");
                 vet.setNome(reading.nextLine());
-                System.out.print("\nEndereço: ");
+                System.out.print("Endereço: ");
                 vet.setRua(reading.nextLine());
-                System.out.print("\nCPF: ");
+                System.out.print("CPF: ");
                 vet.setCpf(reading.nextLong());
-                System.out.print("\nTelefone: ");
+                System.out.print("Telefone: ");
                 vet.setTelefone(reading.nextLong());
-                System.out.print("\nDia de Nascimento: ");
+                System.out.print("Dia de Nascimento: ");
                 dia = reading.nextInt();
-                System.out.print("\nMês de Nascimento: ");
+                System.out.print("Mês de Nascimento: ");
                 mes = reading.nextInt();
-                System.out.print("\nAno de Nascimento: ");
+                System.out.print("Ano de Nascimento: ");
                 ano = reading.nextInt();
                 LocalDate dataAniver = LocalDate.of(ano, mes, dia);
                 vet.setDataNasc(dataAniver);
