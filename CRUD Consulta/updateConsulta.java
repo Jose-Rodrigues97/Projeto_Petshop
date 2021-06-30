@@ -3,7 +3,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public abstract class updateConsulta {
-    public static void atualizarCons(List<Consulta> listConsulta) {
+    public static void atualizarCons(List<Consulta> listConsulta) { 
         try {
             Scanner reading = new Scanner(System.in);
             String id;
