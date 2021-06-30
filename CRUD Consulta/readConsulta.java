@@ -1,5 +1,5 @@
 import java.util.List;
-import java.util.Scanner;
+import java.util.Scanner; 
 
 public abstract class readConsulta {
     public static void pesquisarCons(List<Consulta> listConsulta) {
