@@ -6,7 +6,7 @@ public abstract class deleteFunc {
         try {
             Scanner reading = new Scanner(System.in);
             System.out.println("=======EXCLUIR FUNCIONÁRIO=======");
-            System.out.println("Insira o Id");
+            System.out.println("Insira o Id"); 
             String id = reading.nextLine();
             Boolean idFail = false;
             for (Administrador admin : listAdmin) {
